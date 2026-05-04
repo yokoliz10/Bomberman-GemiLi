@@ -8,6 +8,37 @@
     <link rel="stylesheet" href="./Assets/web fonts/silkscreen_bold_macroman/stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- 🛡️ GemiLi PWA 装甲 & 屏幕自适应 🛡️ -->
+    <link rel="manifest" href="./manifest.json?v=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');</script>
+    
+    <style>
+        /* 抹杀一切滚动条，打造纯黑沉浸视界 */
+        body, html {
+            background-color: #000000 !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            touch-action: none; /* 彻底禁用系统手势 */
+        }
+        
+        /* 锁定画布，绝对不拉伸！ */
+        canvas {
+            max-width: 100vw !important;
+            max-height: 100vh !important;
+            object-fit: contain !important;
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
 </head>
 
 <body>
