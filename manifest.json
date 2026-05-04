@@ -2,7 +2,7 @@
   "name": "GemiLi Bomberman",
   "short_name": "GemiLi Bomb",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "landscape", 
   "start_url": "./index.html",
   "background_color": "#000000",
   "theme_color": "#000000",
